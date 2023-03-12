@@ -12,45 +12,55 @@ Install my-project with npm
 npm i kemo-easy-life
 ```
 
-## Using cli
+## Using CLI
 
 To use cli commands for kemo-easy-life run this command:
 
-```bash
+```javascript
 npm i -g kemo-easy-life
 //then
 kemo-easy-life help //for more commands information
 ```
 ---
 by using cli commands you can create sections very easy like this:
-```bash
-kemo-easy-life create-all users
+```javascript
+kemo-easy-life create users
+//or
+kel create users
 ```
 
-This will auto generate users sections files like below:
+This will auto generate users sections files with some ready code like below:
 
 ![App Screenshot](https://i.ibb.co/0MmQ2gx/folders.png)
 
 ---
+And to create multiple sections once you can separate the section name chain with "-" like below:
+
+```bash
+kel create product-cart
+```
+This will create products and carts section sequentially.
+
+<!-- ---
 Not just sections file! the cli command will generate some ready code for your project like the user route below:
 
 ![App Screenshot](https://i.ibb.co/pWM1D5Y/route.png)
 
 and the controller file :
 
-![App Screenshot](https://i.ibb.co/HpJ6YH2/controller.png)
+![App Screenshot](https://i.ibb.co/HpJ6YH2/controller.png) -->
 
     
 ## Usage/Examples
 
-Quick start, You can easly start runing server with this by using <b>run()<b>.
+Quick start, You can easily start running server with this by using <b>run()<b>.
 ```javascript
 const kemo = require("kemo-easy-life")
 
 // this will start run the server at http://127.0.0.1:7000
 kemo.run() 
 ```
-To change the port or the message after runing:
+To change the port or the message after running:
 
 ```javascript
 const kemo = require("kemo-easy-life")
@@ -134,7 +144,7 @@ kemo.route({
 kemo.run()
 ```
 ## routeGroup middlewares
-You can add middlewares for the whole group or to spacific one .
+You can add middlewares for the whole group or to specific one .
 ```javascript
 const kemo = require("kemo-easy-life")
 
@@ -211,7 +221,7 @@ kemo.run()
 ## Validation keywords
 
 ```javascript
-//# main validation wrods
+//# main validation words
     required,
     isTrue,
     alpha,

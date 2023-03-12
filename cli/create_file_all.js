@@ -7,15 +7,17 @@ const creatingSectionHelper = require("./creating_section_helper");
 const sectionsFolders = ["middlewares", "controllers", "validations", "routes"];
 
 program
-    .command("create-all <name>")
+    .command("create <name>")
     .description(
-        "Create all the sections ['middlewares','routes','controllers','validations']"
+        "Create all sections ['middlewares','routes','controllers','validations']"
     )
     .action((name) => {
-        console.log(`Creating ${name} section`);
-        sectionsFolders.forEach((folder) => {
-            creatingSectionHelper(name, folder);
-        });
+        name.split("-").forEach((sectionName) => {
+            console.log(`Creating ${sectionName} section`);
+            sectionsFolders.forEach((folder) => {
+                creatingSectionHelper(sectionName, folder);
+            });
+        })
     });
 
 sectionsFolders.forEach((folder) => {

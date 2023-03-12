@@ -11,6 +11,35 @@ Install my-project with npm
 ```bash
 npm i kemo-easy-life
 ```
+
+## Using cli
+
+To use cli commands for kemo-easy-life run this command:
+
+```bash
+npm i -g kemo-easy-life
+//then
+kemo-easy-life help //for more commands information
+```
+---
+by using cli commands you can create sections very easy like this:
+```bash
+kemo-easy-life create-all users
+```
+
+This will auto generate users sections files like below:
+
+![App Screenshot](https://i.ibb.co/0MmQ2gx/folders.png)
+
+---
+Not just sections file! the cli command will generate some ready code for your project like the user route below:
+
+![App Screenshot](https://i.ibb.co/pWM1D5Y/route.png)
+
+and the controller file :
+
+![App Screenshot](https://i.ibb.co/HpJ6YH2/controller.png)
+
     
 ## Usage/Examples
 
